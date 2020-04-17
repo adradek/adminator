@@ -1,0 +1,2 @@
+- `docker build -t adminator_templates . `
+- `docker run --rm -it --mount type=bind,source="$(pwd)",target=/usr/src/app adminator_templates bash`

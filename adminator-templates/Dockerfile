@@ -4,9 +4,13 @@ FROM node:13.13.0
 #RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
 #  tee /etc/apt/sources.list.d/yarn.list
 
-#RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
-#  yarn
+RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
+  libpng-dev
 
-RUN npm install
+COPY . /usr/src/app/
+WORKDIR /usr/src/app
 
-CMD ["npm", "run", "dev"]
+#RUN yarn install
+
+#CMD ["npm", "run", "dev"]
+CMD echo "Placeholder"
