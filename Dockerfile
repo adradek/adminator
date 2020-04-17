@@ -12,5 +12,5 @@ COPY . /usr/src/app/
 
 RUN useradd -ms /bin/bash alexey
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+#ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["bin/rails", "s", "-b", "0.0.0.0"]
