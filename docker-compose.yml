@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - gem_cache:/usr/local/bundle
+    # env_file:
+    #   - .env/development/database
+    #   - .env/development/web
+    # depends_on:
+    #   - database
+    #   - elasticsearch
+
+volumes:
+  gem_cache:
