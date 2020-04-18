@@ -8,12 +8,16 @@ services:
     volumes:
       - .:/usr/src/app
       - gem_cache:/usr/local/bundle
-    # env_file:
-    #   - .env/development/database
-    #   - .env/development/web
-    # depends_on:
-    #   - database
-    #   - elasticsearch
+    env_file:
+      - .envdir/development/database
+      - .envdir/development/web
+    depends_on:
+      - database
+  
+  database:
+    image: postgres
+    env_file:
+      - .envdir/development/database
 
 volumes:
   gem_cache:
