@@ -15,7 +15,5 @@ test:
   database: db_test
 
 production:
-  <<: *default
-  database: adminator-on-rails_production
-  username: adminator-on-rails
-  password: <%= ENV['ADMINATOR_ON_RAILS_DATABASE_PASSWORD'] %>
+  encoding: utf8
+  poll: 5
