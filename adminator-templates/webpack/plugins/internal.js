@@ -55,11 +55,11 @@ plugins.push(
 // ---------------------------
 // @Merging Production Plugins
 // ---------------------------
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-if (manifest.IS_PRODUCTION) {
-  plugins.push(
-    new UglifyJSPlugin(
+// if (manifest.IS_PRODUCTION) {
+//   plugins.push(
+//     new UglifyJSPlugin(
     //   {
     //   compress: {
     //     comparisons   : true,
@@ -79,9 +79,9 @@ if (manifest.IS_PRODUCTION) {
     //     comments: false,
     //   },
     // }
-    )
-  );
-}
+//     )
+//   );
+// }
 
 
 // ----------------------------
